@@ -24,7 +24,7 @@ const TABLE_BG = '#1e1e1e'; // Darker background for the table
 const ProDetails = () => { // Renamed component for clarity
   const [products, setProducts] = useState([]);
   // Assuming the API endpoint is constant, for dynamic baseURL use import.meta.env.VITE_API_BASE_URL;
-  const API_URL = "http://localhost:3000/product"; 
+  const API_URL = "http://localhost:3000/product/"; 
   
   var location = useLocation();
   var navigate = useNavigate();

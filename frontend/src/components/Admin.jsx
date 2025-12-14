@@ -47,7 +47,7 @@ const Admin = () => {
   useEffect(() => {
     // 1. Fetch categories
     axios
-      .get(`${baseURL}/cat`)
+      .get(`${baseURL}/cat/c`)
       .then((res) => setCategories(res.data))
       .catch((err) => console.error("Category fetch error:", err));
 
@@ -193,7 +193,7 @@ const Admin = () => {
           <form onSubmit={handleSubmit}>
             <Grid container spacing={3}>
               {/* Name & Price */}
-              <Grid item xs={12} sm={6}>
+              <Grid size={{xs:12,md:4}}>
                 <TextField
                   fullWidth
                   size="small"
@@ -205,7 +205,7 @@ const Admin = () => {
                   sx={darkInputStyle}
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{xs:12,md:4}}>
                 <TextField
                   fullWidth
                   size="small"
@@ -220,7 +220,7 @@ const Admin = () => {
               </Grid>
 
               {/* Category & Stock */}
-              <Grid item xs={12} sm={6}>
+              <Grid size={{xs:12,sm:6}}>
                 <FormControl fullWidth size="small" required sx={darkInputStyle}>
                   <InputLabel id="category-label">Category *</InputLabel>
                   <Select
@@ -239,7 +239,7 @@ const Admin = () => {
                   </Select>
                 </FormControl>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{xs:12,sm:6}}>
                 <TextField
                   fullWidth
                   size="small"
@@ -253,7 +253,7 @@ const Admin = () => {
               </Grid>
 
               {/* Description */}
-              <Grid item xs={12}>
+              <Grid size={{xs:12}}>
                 <TextField
                   fullWidth
                   label="Description"
@@ -267,7 +267,7 @@ const Admin = () => {
               </Grid>
 
               {/* Availability Toggle */}
-              <Grid item xs={12} sm={6}>
+              <Grid size={{xs:12,sm:6}}>
                 <FormControlLabel
                   control={
                     <Switch
@@ -284,7 +284,7 @@ const Admin = () => {
               </Grid>
 
               {/* Image Upload */}
-              <Grid item xs={12} sm={6}>
+              <Grid size={{xs:12,sm:6}}>
                 <Button 
                     variant="contained" 
                     component="label" 

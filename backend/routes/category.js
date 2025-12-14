@@ -26,7 +26,7 @@ router.post("/", async (req, res) => {
 });
 
 // **2. View All Categories**
-router.get("/", async (req, res) => {
+router.get("/c", async (req, res) => {
   try {
     const categories = await Category.find();
     res.status(200).json(categories);

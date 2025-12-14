@@ -40,7 +40,7 @@ router.post('/',upload.array("images", 5),async (req, res) => {
 
   router.get('/', async (req, res) => {
     try {
-      const products = await Product.find().populate("category"); // 👈 this line is key!
+      const products = await Product.find().populate("category"); 
       res.status(200).json(products);
     } catch (error) {
       console.error(error);
