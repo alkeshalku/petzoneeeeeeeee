@@ -157,7 +157,7 @@ const ProductView = () => {
         <Grid container spacing={4}>
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
-              <Grid item xs={12} sm={6} md={4} key={product._id}>
+              <Grid size={{ xs:12 , sm:6 , md:4}} key={product._id}>
                 <Card 
                   sx={{ 
                     height: "100%", 

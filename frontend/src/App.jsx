@@ -7,6 +7,7 @@ import ProductView from "./components/ProductView";
 import Admin from "./components/Admin";
 import ProDetails from "./components/ProDetails";
 import Homepage from "./components/Homepage";
+import UserView from "./components/UserView";
 function App() {
   return (
     <>
@@ -18,7 +19,7 @@ function App() {
         <Route path="/pro" element={<ProductView />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/d" element={<ProDetails />} />
-
+        <Route path="/users" element={<UserView />} />
       </Routes>
     </>
   );

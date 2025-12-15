@@ -19,11 +19,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 // Define theme colors
 const ACCENT_COLOR = '#ffeb3b'; // Vibrant Yellow
 const DARK_BG = '#121212'; // Near-Black background
-const TABLE_BG = '#1e1e1e'; // Darker background for the table
+const TABLE_BG = '#1e1e1e'; 
 
-const ProDetails = () => { // Renamed component for clarity
+const ProDetails = () => { 
   const [products, setProducts] = useState([]);
-  // Assuming the API endpoint is constant, for dynamic baseURL use import.meta.env.VITE_API_BASE_URL;
+  
   const API_URL = "http://localhost:3000/product/"; 
   
   var location = useLocation();
@@ -39,11 +39,11 @@ const ProDetails = () => { // Renamed component for clarity
 
   const updateProd = (pro) => {
     console.log(pro);
-    // Navigate to the ProductAdminForm (previously '/admin')
+    
     navigate("/admin", { state: { pro } }); 
   };
   
-  // Conditional styling for stock/availability
+  
   const getStockColor = (stock) => (stock > 10 ? '#4caf50' : stock > 0 ? ACCENT_COLOR : '#f44336');
   const getAvailabilityText = (isAvailable) => (isAvailable ? "Available" : "Hidden");
 
